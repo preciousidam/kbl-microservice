@@ -45,8 +45,7 @@ services:
     build: 
       context: ./app
       dockerfile: Dockerfile
-    command: >
-      sh -c "python manage.py db migrate &&
+    command: bash -c "python manage.py db migrate &&
              python manage.py db upgrade &&
              python manage.py runserver -h 0.0.0.0 -p 5000 -dr"
     restart: always
@@ -96,8 +95,7 @@ services:
     build:
       context: ./notifications
       dockerfile: Dockerfile
-    command: >
-      sh -c "python manage.py db migrate &&
+    command: bash -c "python manage.py db migrate &&
              python manage.py db upgrade &&
              python manage.py runserver -h 0.0.0.0 -p 5001 -dr"
     restart: always
