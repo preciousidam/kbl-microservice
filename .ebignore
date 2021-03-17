@@ -9,8 +9,6 @@ celerybeat-schedule
 .flaskenv
 *.pyc
 *.pyo
-env/
-env*
 dist/
 build/
 *.egg
